@@ -304,6 +304,8 @@ class Sbif
      */
     private function normalizeNumber($number)
     {
+        $number = str_replace(".", "", $number);
+        
         return (float)str_replace(",", ".", $number);
     }
 }
